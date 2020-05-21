@@ -8,7 +8,7 @@
         @keyup.enter="addTodo"
         placeholder="What needs to be done?"
       />
-      <button type="sumbit" class="btn btn-primary ml-5" @click="addTodo">Add Todo</button>
+      <button type="sumbit" class="btn btn-primary" @click="addTodo">Add Todo</button>
     </div>
     <hr />
     <ul :key="todo.id" v-for="(todo, index) in todos">
@@ -117,6 +117,10 @@ hr {
   justify-content: space-between;
 }
 
+.todo-input-container button {
+  margin-left: 2rem;
+}
+
 p {
   margin: 0;
   padding-top: 1rem;
@@ -124,5 +128,20 @@ p {
 
 ul p {
   cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .todo-input-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .todo-input-container input {
+    margin-bottom: 1.3rem;
+  }
+
+  .todo-input-container button {
+    margin-left: 0;
+  }
 }
 </style>
