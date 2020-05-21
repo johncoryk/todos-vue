@@ -60,6 +60,7 @@ body {
   font-size: 0.95rem;
   color: #eee;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .footer-info a {
